@@ -26,9 +26,9 @@ namespace GameTemplate.Screens
             Refresh();
         }
 
-        private void InstructionScreen_Paint(object sender, PaintEventArgs e)
+        private void InstructionScreen_Paint(object sender, PaintEventArgs e)     //displays instructions
         {
-            e.Graphics.DrawString("Bricks will flow across the screen, \nwhen you hit the green button(or space bar) the brick will stop, \nyour goal is to stack all the bricks", drawFont, drawBrush, 9, 80);
+            e.Graphics.DrawString("Bricks will flow across the screen, \nwhen you hit the green button(or space bar) \n the brick will stop, \nyour goal is to stack all the bricks", drawFont, drawBrush, 9, 80);
         }
 
         private void exitButton_Click(object sender, EventArgs e)

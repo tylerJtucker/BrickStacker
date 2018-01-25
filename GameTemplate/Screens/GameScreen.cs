@@ -31,28 +31,28 @@ namespace GameTemplate.Screens
         //TODO - Place game global variables here 
         //---------------------------------------
 
-        SoundPlayer spaceBar = new SoundPlayer(Properties.Resources.Button);
+        SoundPlayer spaceBar = new SoundPlayer(Properties.Resources.Button);     //Creates all the sounds needed for this screen
         SoundPlayer win = new SoundPlayer(Properties.Resources.Win);
         SoundPlayer lose = new SoundPlayer(Properties.Resources.Lose);
         SoundPlayer winS = new SoundPlayer(Properties.Resources.winS);
 
 
-        const int BH = 70;
+        const int BH = 70;   //creates all constants needed for this screen
         const int SPEED1 = 400;
         const int SIZEMOVE = 60;
         const int BIG_WIDTH = 200;
         const int SMALL_WIDTH = 140;
         const int TINY_WIDTH = 80;
 
-        int[] levelY = { 580, 510, 440, 370, 300, 230, 160, 90, 20 };
+        int[] levelY = { 580, 510, 440, 370, 300, 230, 160, 90, 20 };   //an arrey of all the blocks Y positons
 
-        int xR1, xR2, xR3, xR4, xR5, xR6, xR7, xR8, xR9 = 0;
+        int xR1, xR2, xR3, xR4, xR5, xR6, xR7, xR8, xR9 = 0;     //9 variables all initlized to 0
 
-        int level = 0;
-        Boolean hitR = false;
+        int level = 0;             // variable to track the level
+        Boolean hitR = false;     //boolean to check to see if the brick has hit the right side
 
         //Graphics objects
-        Font drawFont = new Font("Arial", 16, FontStyle.Bold);
+        Font drawFont = new Font("Arial", 16, FontStyle.Bold);     //brushes and fonts needed
 
         SolidBrush BrushL = new SolidBrush(Color.DarkBlue);
 
@@ -68,7 +68,7 @@ namespace GameTemplate.Screens
 
         Pen PenWhite = new Pen(Color.White);
 
-        private void stopTimer_Tick(object sender, EventArgs e)
+        private void stopTimer_Tick(object sender, EventArgs e)    //a timer which checks to see if space bar is pressed, then does the corisponding task
         {
             switch (level)
             {
@@ -260,7 +260,7 @@ namespace GameTemplate.Screens
                 default:
                     break;
             }
-        }
+        }     //checks if keys are down
         private void GameScreen_KeyUp(object sender, KeyEventArgs e)
         {
             //player 1 button releases
@@ -324,13 +324,13 @@ namespace GameTemplate.Screens
                 default:
                     break;
             }
-        }
+        }     //checks if keys are relesed
 
 
-        private void gameTimer_Tick(object sender, EventArgs e)
+        private void gameTimer_Tick(object sender, EventArgs e)  //ticks every 
         {
-
-            #region Row movements
+            //tells bricks where to go
+            #region Row movements    
             switch (level)
             {
                 case 0:
@@ -434,10 +434,10 @@ namespace GameTemplate.Screens
                     break;
             }
 
-            #endregion
+            #endregion       
 
-
-            #region collision detection - TO BE COMPLETED
+            //if brick hits wall the program knows
+            #region collision detection
 
             if (level == 0)
             {
@@ -553,7 +553,7 @@ namespace GameTemplate.Screens
 
 
 
-        }
+        }      //checks if the new brick lines up with the old brick and does the corrsispoding task
 
         private void Check_Collison(int levelx, int Width)
         {
@@ -567,9 +567,7 @@ namespace GameTemplate.Screens
                 hitR = false;
             }
             
-        }
-
-
+        }  //method used to see if the bricks hit the wall
 
         private void pauseGame()
         {
@@ -591,7 +589,7 @@ namespace GameTemplate.Screens
 
         private void GameScreen_Paint(object sender, PaintEventArgs e)
         {
-            //draw rectangle to screen
+            //draw rectangles to screen
             e.Graphics.FillRectangle(BrushL1, xR1, levelY[0], BIG_WIDTH, BH);
             e.Graphics.FillRectangle(BrushL2, xR2, levelY[1], BIG_WIDTH, BH);
             e.Graphics.FillRectangle(BrushL3, xR3, levelY[2], BIG_WIDTH, BH);

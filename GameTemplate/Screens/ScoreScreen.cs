@@ -32,7 +32,7 @@ namespace GameTemplate.Screens
             prizesLeftS.Text = "Small Prizes Left: " + Class1.sPrizesWon;
             prizeLeftB.Text = "Big Prizes Left: " + Class1.bPrizesWon;
 
-            prizesUnlock(Class1.smallP1, sPrizeBox4, GameTemplate.Properties.Resources.sPrize4);
+            prizesUnlock(Class1.smallP1, sPrizeBox4, GameTemplate.Properties.Resources.sPrize4);     //desplays prizes
             prizesUnlock(Class1.smallP2, sPrizeBox1, GameTemplate.Properties.Resources.sPrize1);
             prizesUnlock(Class1.smallP3, sPrizeBox2, GameTemplate.Properties.Resources.sPrize2);
             prizesUnlock(Class1.smallP4, sPrizeBox3, GameTemplate.Properties.Resources.sPrize3);
@@ -143,7 +143,7 @@ namespace GameTemplate.Screens
 
                 }
                 prizeButton.Visible = true;
-            } 
+            }      //if a small prize is won then the corissponding task will run
             else if (Class1.winBig == true)
             {
                 Class1.bPrizesWon--;
@@ -235,7 +235,7 @@ namespace GameTemplate.Screens
                         break;
                 }
                 prizeButton.Visible = true;
-            }
+            }    // if a big prize is won the corrisponding task will run
 
             if (Class1.sPrizesWon <= 0)
             {
@@ -255,7 +255,7 @@ namespace GameTemplate.Screens
                 prizeBox.BackgroundImage = prizeImage;
                 prizeBox.Refresh();
             }
-        }
+        }   //method to desplay prizes
 
 
             private void ScoreScreen_Paint(object sender, PaintEventArgs e)
