@@ -1,4 +1,10 @@
-﻿using System;
+﻿//Tyler Tucker
+//Instruction Screen
+//Gives the user instructions
+
+
+
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Drawing;

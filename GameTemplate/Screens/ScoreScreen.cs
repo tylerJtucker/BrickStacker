@@ -1,4 +1,8 @@
-﻿using System;
+﻿//Tyler Tucker
+//Prizes Screen
+//Shows what prizes the user had won
+
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Drawing;

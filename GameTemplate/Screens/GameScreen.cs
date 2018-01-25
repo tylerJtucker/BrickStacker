@@ -1,4 +1,8 @@
-﻿ using GameTemplate.Dialogs;
+﻿//Tyler Tucker
+//Game Screen
+//User plays the game
+
+using GameTemplate.Dialogs;
 using System;
 using System.Drawing;
 using System.Windows.Forms;
